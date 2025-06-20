@@ -1,0 +1,23 @@
+# Python 캐시
+__pycache__/
+*.pyc
+
+# 환경 변수
+.env
+
+# Playwright 실행 결과물
+screenshots/
+.cache/
+playwright/.cache/
+**/playwright/.cache/
+
+# Allure 리포트
+allure-report/
+allure-results/
+
+# IDE 설정
+.vscode/
+.idea/
+
+# 시스템 파일
+.DS_Store
