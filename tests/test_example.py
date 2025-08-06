@@ -1,5 +1,6 @@
 import allure
 from pages.example_page import ExamplePage
+from utils.error_handler import safe_run
 
 @allure.suite("메인")
 @allure.title("메인 페이지 로딩 확인")
@@ -7,7 +8,7 @@ from pages.example_page import ExamplePage
 def test_example(page):
 
     example_page = ExamplePage(page)
-
+    
     with allure.step("페이지 타이틀 확인"):
         title = example_page.get_title()
         print(f"Page Title: {title}")
@@ -23,5 +24,4 @@ def test_example(page):
     with allure.step("페이지 타이틀 검사"):
         assert "예상 타이틀" in page.title()
 
-    with allure.step("로그인 버튼 클릭"):
-        example_page.click_login_button()
+    safe_run("로그인 버튼 클릭", page, lambda: example_page.click_login_button())
