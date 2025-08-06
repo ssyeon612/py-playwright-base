@@ -40,10 +40,12 @@ YT_TEST/
 ├── conftest.py         # 공통 테스트 초기화 설정 (진입 페이지, 팝업 닫기 등)
 ├── db.py               # DB 연결 및 쿼리 유틸 함수 (fetch, insert 등)
 ├── Makefile            # 테스트 실행 및 리포트 생성 자동화 명령어
+├── pages/              # Page Object Model 구조 폴더
+│ ├── base_page.py      # 공통 BasePage (locator, click, input 등 메서드)
 ├── tests/              # 테스트 스크립트 디렉토리
 │ ├── test_example.py
 │ └── ...
-├── helpers/            # 공통 유틸리티 함수
+├── utils/            # 공통 유틸리티 함수
 │ ├── error_handler.py  # 예외 처리 + 스크린샷 첨부
 │ └── ... 
 ├── screenshots/        # 테스트 실패 시 스크린샷 저장 위치

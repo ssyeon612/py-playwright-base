@@ -1,12 +1,8 @@
-import pytest
-import pymysql
-import allure
+import pytest, allure, os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from db import get_connection
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 
